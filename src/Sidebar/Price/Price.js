@@ -1,42 +1,48 @@
+
+import Input from "../components/Input"
 import "./Price.css";
 
- function Price() {
+const Price = ({ handleChange }) => {
   return (
-    <div className="ml">
-    <h2 className="sidebar-title-price-title">Price</h2>
+    <>
+      <div className="ml">
+        <h2 className="sidebar-title price-title">Price</h2>
 
-    <label className='sidebar-label-container'>
-    <input type='radio' name='test2'/>
-    <span className='checkmark'></span>All
-    </label>
+        <label className="sidebar-label-container">
+          <input onChange={handleChange} type="radio" value="" name="test2" />
+          <span className="checkmark"></span>All
+        </label>
 
-    <label className='sidebar-label-container'>
-    <input type='radio' name='test2'/>
-    <span className='checkmark'></span>₹0-₹500
-    </label>
+        <Input
+          handleChange={handleChange}
+          value={500}
+          title="₹0 - 500"
+          name="test2"
+        />
 
-    <label className='sidebar-label-container'>
-    <input type='radio' name='test2'/>
-    <span className='checkmark'></span>₹500-₹1000
-    </label>
+        <Input
+          handleChange={handleChange}
+          value={1000}
+          title="₹500 - v1000"
+          name="test2"
+        />
 
-    <label className='sidebar-label-container'>
-    <input type='radio' name='test2'/>
-    <span className='checkmark'></span>₹1000-₹1500
-    </label>
+        <Input
+          handleChange={handleChange}
+          value={1500}
+          title="₹1000 - ₹1500"
+          name="test2"
+        />
 
-
-    <label className='sidebar-label-container'>
-    <input type='radio' name='test2'/>
-    <span className='checkmark'></span>₹2000-Over
-    </label>
-
-    </div>
-
-
-
-  )
-}
-
+        <Input
+          handleChange={handleChange}
+          value={2000}
+          title="Over ₹1500"
+          name="test2"
+        />
+      </div>
+    </>
+  );
+};
 
 export default Price;

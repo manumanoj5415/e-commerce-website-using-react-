@@ -6,7 +6,8 @@ import './sidebar.Module.css';
 import { TiShoppingCart } from "react-icons/ti";
 
 
- function Sidebar() {
+ function Sidebar({handleChange }) {
+
   return <>
   
   <section className='sidebar'>
@@ -15,9 +16,9 @@ import { TiShoppingCart } from "react-icons/ti";
   
   </div>
 
-  <Category/>
-  <Price/>
-  <Colors/>
+  <Category handleChange ={handleChange}/>
+  <Price handleChange ={handleChange}/>
+  <Colors handleChange ={handleChange}/>
   </section>
   
   </>
