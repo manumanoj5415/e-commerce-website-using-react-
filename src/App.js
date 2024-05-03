@@ -8,6 +8,7 @@ import Sidebar from "./Sidebar/Sidebar";
 import Card from "./components/Card";
 import "./index.css";
 
+// msg
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
